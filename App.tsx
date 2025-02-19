@@ -12,19 +12,19 @@ import { Pokemon } from "./src/models/PokemonModel";
 
 // Definindo os parâmetros da navegação
 type RootStackParamList = {
-  Home: undefined;
-  PokemonPage: { pokemon: Pokemon };
+	Home: undefined;
+	PokemonPage: { pokemon: Pokemon };
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="PokemonPage" component={PokemonPage} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+	return (
+		<NavigationContainer>
+			<Stack.Navigator screenOptions={{ headerShown: false }}>
+				<Stack.Screen name="Home" component={Home} />
+				<Stack.Screen name="PokemonPage" component={PokemonPage} />
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
 }
